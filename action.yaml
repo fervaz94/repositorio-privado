@@ -5,6 +5,7 @@ runs:
   steps:
     - name: primer step composite
       id: step1composite
+      shell: bash
       run: |
         echo $variablecomposite
         pwd
@@ -14,6 +15,7 @@ runs:
         echo "github_env_variable=prueba" >> "$GITHUB_ENV"
     - name: segundo step composite
       id: step2composite
+      shell: bash
       run: |
         env
         echo $variablecomposite
