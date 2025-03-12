@@ -1,0 +1,17 @@
+name: Composite action
+
+runs:
+  using: "composite"
+  steps:
+    - name: primer step composite
+      id: step1composite
+      run: |
+        pwd
+        ls -l
+        env
+        ls -lrt ${{ github.action_path }}
+    - name: segundo step composite
+      id: step2composite
+      run: |
+        env
+        bash ${{ github.action_path }}/script.sh
