@@ -1,2 +1,2 @@
 #! /bin/bash
-echo "hola estoy dentro de un script
+echo "hola estoy dentro de un script"
