@@ -6,12 +6,15 @@ runs:
     - name: primer step composite
       id: step1composite
       run: |
+        echo $variablecomposite
         pwd
         ls -l
         env
         ls -lrt ${{ github.action_path }}
+        echo "github_env_variable=prueba" >> "$GITHUB_ENV"
     - name: segundo step composite
       id: step2composite
       run: |
         env
+        echo $variablecomposite
         bash ${{ github.action_path }}/script.sh
